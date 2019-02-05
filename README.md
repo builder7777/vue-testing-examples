@@ -139,7 +139,7 @@ it('should call external API with given params', function () {
 });
 ```
 
-### Dos
+### Do's
 
 * When defining mock, always try to set expected params or body (be as much specific as it gets). It prevents your tests going green because of the functionality under test was accidentally called from other parts of your code.
 * Always specify the number of calls you expect to happen. Use `replyOnce` when you know the external call should happen only once (99% test cases). If your code has a bug and calls API twice, you will spot the problem because the 2nd call will fail with `Error: Request failed with status code 404`.
@@ -162,7 +162,7 @@ AxiosMockAdapter.prototype.verifyNoOutstandingExpectation = function () {
 };
 ```
 
-### Don'ts
+### Dont's
 
 * Do not mock original axios functions because you loose huge portion of functionality done by axios (e.g. custom interceptors).
 
